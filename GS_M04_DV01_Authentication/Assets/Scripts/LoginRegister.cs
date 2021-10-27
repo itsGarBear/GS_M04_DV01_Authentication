@@ -63,7 +63,7 @@ public class LoginRegister : MonoBehaviour
         );
     }
 
-    void SetDisplayText(string text, Color color)
+    public void SetDisplayText(string text, Color color)
     {
         displayText.text = text;
         displayText.color = color;

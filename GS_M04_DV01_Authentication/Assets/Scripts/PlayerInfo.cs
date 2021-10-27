@@ -27,9 +27,9 @@ public class PlayerInfo : MonoBehaviour
             result =>
             {
                 profile = result.PlayerProfile;
-                Debug.Log("Loaded in player: " + profile.DisplayName);
+                LoginRegister.instance.SetDisplayText("Loaded in player: " + profile.DisplayName, Color.green);
             },
-            error => Debug.Log(error.ErrorMessage)
+            error => LoginRegister.instance.SetDisplayText(error.ErrorMessage, Color.red)
             );
     }
 }
